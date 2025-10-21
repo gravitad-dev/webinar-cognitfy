@@ -41,10 +41,10 @@ const Hero = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Webinar en vivo — elige tu sesión
+            Construimos tu agente en 72 horas
           </h1>
           <p className="mt-6 text-xl font-semibold text-gray-100 sm:text-2xl">
-          70% menos de costes en tus procesos, 30% más de rentabilidad y 50% más de productividad en tu negocio sin costes adicionales para tu negocio. 
+          70% menos de costes en tus procesos, 30% más de rentabilidad y 50% más de productividad sin costes adicionales para tu negocio.
 
           </p>
           <p className="mx-auto mt-6 max-w-3xl text-base text-gray-300 sm:text-lg">
