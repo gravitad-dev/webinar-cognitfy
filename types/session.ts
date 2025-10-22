@@ -8,20 +8,6 @@ export interface ISession {
 
 export const SESSIONS: ISession[] = [
   {
-    id: '2025-10-22',
-    label: 'Miércoles, 22 de octubre',
-    dateISO: '2025-10-22T18:00:00+02:00',
-    durationMin: 60,
-    cta: 'Quiero asistir 22/10',
-  },
-  {
-    id: '2025-10-23',
-    label: 'Jueves, 23 de octubre',
-    dateISO: '2025-10-23T18:00:00+02:00',
-    durationMin: 60,
-    cta: 'Quiero asistir 23/10',
-  },
-  {
     id: '2025-10-29',
     label: 'Miércoles, 29 de octubre',
     dateISO: '2025-10-29T18:00:00+01:00',
@@ -34,6 +20,20 @@ export const SESSIONS: ISession[] = [
     dateISO: '2025-10-30T18:00:00+01:00',
     durationMin: 60,
     cta: 'Quiero asistir 30/10',
+  },
+  {
+    id: '2025-11-12',
+    label: 'Miércoles, 12 de noviembre',
+    dateISO: '2025-11-12T18:00:00+01:00',
+    durationMin: 60,
+    cta: 'Quiero asistir 12/11',
+  },
+  {
+    id: '2025-11-13',
+    label: 'Jueves, 13 de noviembre',
+    dateISO: '2025-11-13T18:00:00+01:00',
+    durationMin: 60,
+    cta: 'Quiero asistir 13/11',
   },
 ]
 

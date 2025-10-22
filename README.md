@@ -88,10 +88,10 @@ npm start
 
 ## Sesiones del Webinar
 
-- **Miércoles, 22 de octubre 2025** - 18:00 CEST
-- **Jueves, 23 de octubre 2025** - 18:00 CEST
 - **Miércoles, 29 de octubre 2025** - 18:00 CET
 - **Jueves, 30 de octubre 2025** - 18:00 CET
+- **Miércoles, 12 de noviembre 2025** - 18:00 CET
+- **Jueves, 13 de noviembre 2025** - 18:00 CET
 
 **Nota:** El cambio horario de verano a invierno en Europa ocurre el 26 de octubre de 2025.
 
