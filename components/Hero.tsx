@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 
 import { ANALYTICS_KEYS } from '@/lib/analytics'
 import { openElevenLabsAgent } from '@/lib/elevenlabs'
+import DemoModal from './DemoModal'
 
 const Hero = () => {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
   return (
     <section className="relative overflow-hidden bg-black py-32 sm:py-40 lg:py-56">
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-center">
@@ -40,15 +43,18 @@ const Hero = () => {
       </div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Construimos tu agente en 72 horas
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Construimos tu operador virtual en 72 horas
           </h1>
           <p className="mt-6 text-xl font-semibold text-gray-100 sm:text-2xl">
-          70% menos de costes en tus procesos, 30% más de rentabilidad y 50% más de productividad sin costes adicionales para tu negocio.
+          Descubre los costes reales que se esconden a simple vista en la gestión de tu negocio y cómo aplicar tecnología inteligente sin esfuerzo ni sobrecostes con Cognitfy. 
 
           </p>
-          <p className="mx-auto mt-6 max-w-3xl text-base text-gray-300 sm:text-lg">
-          Descubre los costes reales que se esconden a simple vista en la gestión de tu negocio y cómo aplicar tecnología inteligente sin esfuerzo ni sobrecostes con Cognitfy. 
+          <p className="mx-auto mt-6 flex max-w-3xl items-center justify-center gap-3 text-base text-gray-300 sm:text-lg">
+            <svg className="h-8 w-8 flex-shrink-0 animate-pulse text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.8)] sm:h-10 sm:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+            <span>Y no pagues hasta que tu operador virtual esté demostrando resultados</span>
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:flex-wrap sm:gap-4 md:gap-6">
@@ -107,13 +113,15 @@ const Hero = () => {
               type="button"
               className="w-full rounded-lg border-2 border-white bg-transparent px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900 sm:w-auto"
               data-analytics={ANALYTICS_KEYS.CTA_DEMO}
-              onClick={openElevenLabsAgent}
+              onClick={() => setIsDemoModalOpen(true)}
             >
-              Quiero una demo de Cognitfy
+              Quiero agendar una demo
             </button>
           </div>
         </div>
       </div>
+
+      <DemoModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
     </section>
   )
 }
