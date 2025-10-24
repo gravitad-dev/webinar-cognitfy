@@ -96,6 +96,9 @@ const Hero = () => {
                 <p className="mt-1 text-lg font-bold text-white">
                   Calculadora de coste por proceso
                 </p>
+                <p className="mt-2 text-sm text-gray-300">
+                  Identifica y reduce hasta un 70% los costes operativos ocultos de tu negocio
+                </p>
               </div>
             </div>
           </div>
