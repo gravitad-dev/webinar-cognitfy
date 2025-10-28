@@ -184,12 +184,12 @@ const CalculadoraPage = () => {
 
           {/* Main Calculator */}
           <div className="overflow-hidden rounded-2xl bg-white shadow-2xl">
-            <div className="px-6 py-4 sm:px-8 sm:py-6">
+            <div className="px-3 py-2 sm:px-4 sm:py-3">
             {!showResults ? (
-              <div className="space-y-8">
+              <div className="space-y-4">
                 {/* Current Process Summary - Always Visible */}
-                <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-6 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <div className="bg-gradient-to-r from-slate-50 to-gray-50 rounded-2xl p-3 border border-gray-200">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
                     <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -237,7 +237,7 @@ const CalculadoraPage = () => {
                 </div>
                 {/* Step 1: Basic Process Info */}
                 {currentStep === 1 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Información básica del proceso</h2>
                       <p className="mt-2 text-gray-600">Empecemos con los datos fundamentales</p>
@@ -281,7 +281,7 @@ const CalculadoraPage = () => {
 
                 {/* Step 2: Resources */}
                 {currentStep === 2 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Recursos humanos</h2>
                       <p className="mt-2 text-gray-600">Cuéntanos sobre el equipo involucrado</p>
@@ -325,7 +325,7 @@ const CalculadoraPage = () => {
 
                 {/* Step 3: Time and Complexity */}
                 {currentStep === 3 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Tiempo y complejidad</h2>
                       <p className="mt-2 text-gray-600">¿Cuánto tiempo se dedica y qué tan complejo es?</p>
@@ -377,7 +377,7 @@ const CalculadoraPage = () => {
 
                 {/* Step 4: Process Urgency and Peak Hours */}
                 {currentStep === 4 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Urgencia y patrones</h2>
                       <p className="mt-2 text-gray-600">¿Qué tan urgente es este proceso y cuándo es más activo?</p>
@@ -437,7 +437,7 @@ const CalculadoraPage = () => {
 
                 {/* Step 5: Current Automation */}
                 {currentStep === 5 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Automatización actual</h2>
                       <p className="mt-2 text-gray-600">¿Qué nivel de automatización tienes ahora?</p>
@@ -466,7 +466,7 @@ const CalculadoraPage = () => {
 
                 {/* Step 6: Priority */}
                 {currentStep === 6 && (
-                  <div className="space-y-6">
+                  <div className="space-y-4">
                     <div className="text-center">
                       <h2 className="text-2xl font-bold text-gray-900">Prioridad del proyecto</h2>
                       <p className="mt-2 text-gray-600">¿Qué tan urgente es automatizar este proceso?</p>
@@ -494,7 +494,7 @@ const CalculadoraPage = () => {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between pt-6">
+                <div className="flex justify-between pt-4">
                   <button
                     onClick={prevStep}
                     disabled={currentStep === 1}
