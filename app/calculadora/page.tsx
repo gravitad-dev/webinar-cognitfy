@@ -530,9 +530,9 @@ const CalculadoraPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Tu Análisis de Ahorro</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Tu Análisis de Ahorro Estimado</h2>
                   <p className="text-base text-gray-600 max-w-2xl mx-auto">
-                    Basado en tus respuestas, aquí está tu análisis personalizado de ahorro con Cognitfy
+                    Basado en tus respuestas, aquí está tu análisis personalizado de ahorro estimado con Cognitfy
                   </p>
                 </div>
 
@@ -638,17 +638,17 @@ const CalculadoraPage = () => {
                           <div className="text-3xl font-bold text-green-600 mb-1">
                             {annualSavings.toLocaleString('es-ES')}€
                           </div>
-                          <div className="text-sm text-green-700 font-semibold">Ahorro anual</div>
+                          <div className="text-sm text-green-700 font-semibold">Ahorro anual estimado</div>
                         </div>
                         
                         <div className="grid grid-cols-2 gap-3">
                           <div className="bg-green-50 rounded-lg p-3 text-center border border-green-200">
                             <div className="text-lg font-bold text-green-600 mb-0.5">{monthlySavings.toLocaleString('es-ES')}€</div>
-                            <div className="text-xs text-green-700 font-medium">Mensual</div>
+                            <div className="text-xs text-green-700 font-medium">Mensual estimado</div>
                           </div>
                           <div className="bg-green-50 rounded-lg p-3 text-center border border-green-200">
                             <div className="text-lg font-bold text-green-600 mb-0.5">{dailySavings.toLocaleString('es-ES')}€</div>
-                            <div className="text-xs text-green-700 font-medium">Diario</div>
+                            <div className="text-xs text-green-700 font-medium">Diario estimado</div>
                           </div>
                         </div>
                       </div>
@@ -684,7 +684,7 @@ const CalculadoraPage = () => {
                               <div className="text-sm font-bold text-purple-600">ganas €{(roi / 100).toFixed(2)}</div>
                             </div>
                           </div>
-                          <div className="text-xs text-purple-600">ROI anual esperado</div>
+                          <div className="text-xs text-purple-600">ROI anual estimado</div>
                         </div>
 
                         {/* Payback Period */}
@@ -697,7 +697,7 @@ const CalculadoraPage = () => {
                                 </svg>
                               </div>
                               <div>
-                                <div className="text-xs text-blue-700 font-medium">Recuperación</div>
+                                <div className="text-xs text-blue-700 font-medium">Recuperación estimada</div>
                                 <div className="text-2xl font-bold text-blue-600">{paybackPeriod.toFixed(1)}</div>
                               </div>
                             </div>
