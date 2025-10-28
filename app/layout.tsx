@@ -2,6 +2,7 @@
   import Script from 'next/script'
 
   import { generateAllEventsSchema, generateFAQSchema } from '@/lib/schema'
+  import WidgetController from '@/components/WidgetController'
 
   import './globals.css'
 
@@ -97,7 +98,7 @@
           />
         </head>
         <body className={inter.className}>
-          <elevenlabs-convai agent-id="agent_6701k7s7r039ewjt3epnd5xd32d7"></elevenlabs-convai>
+          <WidgetController />
           <div
             id="cognitfy-watermark"
             style={{
