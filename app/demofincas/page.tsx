@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const DemofincasPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +42,13 @@ const DemofincasPage = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-blue-600">DemoFincas</h1>
+                <Image 
+                  src="/logo/logofincas.png" 
+                  alt="DemoFincas Logo" 
+                  width={180} 
+                  height={54}
+                  className="h-14 w-auto"
+                />
               </div>
             </div>
             
