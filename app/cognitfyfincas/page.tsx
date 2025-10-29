@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const DemofincasPage = () => {
+const CognitfyfincasPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -17,7 +17,7 @@ const DemofincasPage = () => {
     }
   };
 
-  // Cargar el script del widget de ElevenLabs específico para demofincas
+  // Cargar el script del widget de ElevenLabs específico para cognitfyfincas
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
@@ -44,7 +44,7 @@ const DemofincasPage = () => {
               <div className="flex-shrink-0">
                 <Image 
                   src="/logo/logofincas.png" 
-                  alt="DemoFincas Logo" 
+                  alt="CognitfyFincas Logo" 
                   width={180} 
                   height={54}
                   className="h-14 w-auto"
@@ -309,7 +309,7 @@ const DemofincasPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                ¿Por qué elegir DemoFincas?
+                ¿Por qué elegir CognitfyFincas?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Con más de 15 años de experiencia en el sector inmobiliario, nos especializamos en la administración profesional de propiedades residenciales y comerciales.
@@ -411,7 +411,7 @@ const DemofincasPage = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Email</p>
-                    <p className="text-blue-100">info@demofincas.com</p>
+                    <p className="text-blue-100">info@cognitfyfincas.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -497,7 +497,7 @@ const DemofincasPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">DemoFincas</h3>
+              <h3 className="text-2xl font-bold mb-4">CognitfyFincas</h3>
               <p className="text-gray-400 mb-4">
                 Administración profesional de fincas y propiedades con más de 15 años de experiencia.
               </p>
@@ -531,15 +531,15 @@ const DemofincasPage = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 DemoFincas. Todos los derechos reservados.</p>
+            <p>&copy; 2024 CognitfyFincas. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
 
-      {/* Widget de ElevenLabs específico para demofincas */}
+      {/* Widget de ElevenLabs específico para cognitfyfincas */}
       <elevenlabs-convai agent-id="agent_7301k8p284bxfk1v56chs3kdtjnn"></elevenlabs-convai>
     </div>
   );
 };
 
-export default DemofincasPage;
+export default CognitfyfincasPage;
