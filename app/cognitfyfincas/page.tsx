@@ -34,6 +34,142 @@ const CognitfyfincasPage = () => {
     };
   }, []);
 
+  // Ocultar la marca de agua de ElevenLabs - usando la misma función del webinar principal
+  useEffect(() => {
+    const hideBranding = () => {
+      const widget = document.querySelector('elevenlabs-convai[agent-id="agent_7301k8p284bxfk1v56chs3kdtjnn"]');
+      if (!widget) return;
+      
+      const shadowRoot = widget.shadowRoot;
+      if (shadowRoot) {
+        const selectors = ['[class*="powered"]', '[class*="branding"]', '[class*="footer"]', 'a[href*="elevenlabs"]', 'a[href*="Agents"]'];
+        selectors.forEach(sel => {
+          shadowRoot.querySelectorAll(sel).forEach(el => {
+            const element = el as HTMLElement;
+            element.style.display = 'none';
+            element.style.visibility = 'hidden';
+            element.style.opacity = '0';
+            element.style.height = '0';
+            element.style.overflow = 'hidden';
+          });
+        });
+        
+        const walker = document.createTreeWalker(shadowRoot, NodeFilter.SHOW_TEXT);
+        const nodesToHide: Node[] = [];
+        let node;
+        while ((node = walker.nextNode())) {
+          if (node.textContent && /powered\s+by/i.test(node.textContent)) {
+            nodesToHide.push(node);
+          }
+        }
+        nodesToHide.forEach(n => {
+          if (n.parentElement) {
+            n.parentElement.style.display = 'none';
+          }
+        });
+        
+        try {
+          const style = document.createElement('style');
+          style.textContent = '[class*="powered"],[class*="branding"],[class*="footer"],a[href*="elevenlabs"],a[href*="Agents"]{display:none!important;visibility:hidden!important;opacity:0!important;height:0!important;overflow:hidden!important;}';
+          shadowRoot.appendChild(style);
+        } catch {
+          // Silently fail if style injection doesn't work
+        }
+      }
+    };
+    
+    const customizeButton = () => {
+      const widget = document.querySelector('elevenlabs-convai[agent-id="agent_7301k8p284bxfk1v56chs3kdtjnn"]');
+      if (!widget) return;
+      
+      const shadowRoot = widget.shadowRoot;
+      if (!shadowRoot) return;
+      
+      const containers = shadowRoot.querySelectorAll('div');
+      let largeContainer: HTMLElement | null = null;
+      
+      containers.forEach(div => {
+        const rect = div.getBoundingClientRect();
+        if (rect.width > 300 && rect.height > 300) {
+          largeContainer = div as HTMLElement;
+        }
+      });
+      
+      const buttons = shadowRoot.querySelectorAll('button');
+      
+      buttons.forEach(btn => {
+        const button = btn as HTMLElement;
+        const svg = button.querySelector('svg');
+        if (!svg || button.offsetWidth === 0) return;
+        
+        const rect = button.getBoundingClientRect();
+        const isCircular = Math.abs(rect.width - rect.height) < 10;
+        const isPhoneButton = rect.width >= 50 && rect.width <= 80;
+        
+        if (!isCircular || !isPhoneButton) return;
+        
+        const isInsideLargeContainer = largeContainer && largeContainer.contains(button);
+        
+        if (svg.style.display !== 'none') {
+          svg.style.display = 'none';
+          
+          button.style.width = 'auto';
+          button.style.height = 'auto';
+          button.style.padding = '6px 10px';
+          button.style.borderRadius = '18px';
+          button.style.fontSize = '10px';
+          button.style.fontWeight = '600';
+          button.style.whiteSpace = 'nowrap';
+          
+          let textSpan = button.querySelector('.custom-text-widget') as HTMLElement;
+          if (!textSpan) {
+            textSpan = document.createElement('span');
+            textSpan.className = 'custom-text-widget';
+            textSpan.style.color = 'white';
+            button.appendChild(textSpan);
+          }
+          
+          if (isInsideLargeContainer) {
+            textSpan.textContent = 'Llamar ahora';
+            button.dataset.buttonType = 'modal-button';
+          } else {
+            textSpan.textContent = 'Toque aquí para iniciar';
+            button.dataset.buttonType = 'floating-button';
+          }
+        }
+      });
+    };
+    
+    hideBranding();
+    customizeButton();
+    setTimeout(hideBranding, 100);
+    setTimeout(customizeButton, 100);
+    setTimeout(hideBranding, 500);
+    setTimeout(customizeButton, 500);
+    setTimeout(hideBranding, 1000);
+    setTimeout(customizeButton, 1000);
+    setTimeout(hideBranding, 2000);
+    setTimeout(customizeButton, 2000);
+    
+    // Ejecutar ambas funciones continuamente
+    const interval = setInterval(() => {
+      hideBranding();
+      customizeButton();
+    }, 500);
+    
+    const observer = new MutationObserver(() => {
+      hideBranding();
+      customizeButton();
+    });
+    
+    observer.observe(document.body, {childList: true, subtree: true});
+    
+    return () => {
+      clearInterval(interval);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}

@@ -106,7 +106,7 @@
               bottom: '20px',
               right: '20px',
               fontSize: '12px',
-              color: '#9ca3af',
+              color: '#4b5563',
               fontFamily: 'system-ui, -apple-system, sans-serif',
               fontWeight: 'bold',
               opacity: 0.4,
