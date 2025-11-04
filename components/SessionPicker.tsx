@@ -14,9 +14,11 @@ const SessionPicker = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 flex flex-wrap justify-center gap-6">
           {SESSIONS.map((session) => (
-            <SessionCard key={session.id} session={session} />
+            <div key={session.id} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] max-w-sm">
+              <SessionCard session={session} />
+            </div>
           ))}
         </div>
       </div>
