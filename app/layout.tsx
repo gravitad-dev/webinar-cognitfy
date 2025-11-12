@@ -3,6 +3,7 @@
 
   import { generateAllEventsSchema, generateFAQSchema } from '@/lib/schema'
   import WidgetController from '@/components/WidgetController'
+  import AckeeTracker from '@/components/AckeeTracker'
 
   import './globals.css'
 
@@ -98,12 +99,11 @@
           />
           <Script
             src="http://18.118.100.235:2337/tracker.js"
-            data-ackee-server="http://18.118.100.235:2337"
-            data-ackee-domain-id="d7439c13-77fa-4a25-9852-320e81b89b3b"
             strategy="afterInteractive"
           />
         </head>
         <body className={inter.className}>
+          <AckeeTracker />
           <WidgetController />
           <div
             id="cognitfy-watermark"
