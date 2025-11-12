@@ -96,6 +96,12 @@
             src="https://unpkg.com/@elevenlabs/convai-widget-embed"
             strategy="afterInteractive"
           />
+          <Script
+            src="http://18.118.100.235:2337/tracker.js"
+            data-ackee-server="http://18.118.100.235:2337"
+            data-ackee-domain-id="d7439c13-77fa-4a25-9852-320e81b89b3b"
+            strategy="afterInteractive"
+          />
         </head>
         <body className={inter.className}>
           <WidgetController />
