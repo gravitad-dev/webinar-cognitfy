@@ -64,7 +64,7 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span className="whitespace-nowrap text-xs font-medium text-gray-200 sm:text-sm">12 y 13 de noviembre</span>
+              <span className="whitespace-nowrap text-xs font-medium text-gray-200 sm:text-sm">20 y 21 de noviembre</span>
             </div>
             <div className="flex w-full max-w-sm items-center gap-2.5 rounded-lg border border-gray-700/50 bg-slate-800/30 px-3 py-2 backdrop-blur-sm sm:w-auto sm:px-4 sm:py-2.5">
               <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/20 sm:h-8 sm:w-8">
