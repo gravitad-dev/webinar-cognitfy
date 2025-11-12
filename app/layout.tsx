@@ -1,5 +1,6 @@
   import { Inter } from 'next/font/google'
   import Script from 'next/script'
+  import { Suspense } from 'react'
 
   import { generateAllEventsSchema, generateFAQSchema } from '@/lib/schema'
   import WidgetController from '@/components/WidgetController'
@@ -97,13 +98,11 @@
             src="https://unpkg.com/@elevenlabs/convai-widget-embed"
             strategy="afterInteractive"
           />
-          <Script
-            src="http://18.118.100.235:2337/tracker.js"
-            strategy="afterInteractive"
-          />
         </head>
         <body className={inter.className}>
-          <AckeeTracker />
+          <Suspense fallback={null}>
+            <AckeeTracker />
+          </Suspense>
           <WidgetController />
           <div
             id="cognitfy-watermark"
