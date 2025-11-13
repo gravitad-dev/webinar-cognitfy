@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import * as ackeeTracker from 'ackee-tracker'
 
-const ACKEE_SERVER = 'http://18.118.100.235:2337'
+const ACKEE_SERVER = 'https://aki.useteam.io'
 const ACKEE_DOMAIN_ID = 'd7439c13-77fa-4a25-9852-320e81b89b3b'
 
 const AckeeTracker = () => {
