@@ -21,7 +21,7 @@ const AckeeTracker = () => {
     try {
       const tracker = ackeeTracker.create(ACKEE_SERVER, {
         ignoreLocalhost: false,
-        detailed: false,
+        detailed: true,
         ignoreOwnVisits: false,
       })
 
