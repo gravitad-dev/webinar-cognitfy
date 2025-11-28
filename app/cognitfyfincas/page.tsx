@@ -263,12 +263,13 @@ const CognitfyfincasPage = () => {
                 >
                   Solicitar Consulta Gratuita
                 </button>
-                <button 
-                  onClick={() => window.open('https://calendly.com/gravitad/30min?month=2025-12', '_blank', 'noopener,noreferrer')}
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                <a 
+                  href="/images/Webinar Administracion-Inteligente.pdf"
+                  download="Webinar-Administracion-Inteligente.pdf"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-center"
                 >
-                  Ver Nuestros Servicios
-                </button>
+                  Descargar Presentación
+                </a>
               </div>
             </div>
             <div className="relative">
