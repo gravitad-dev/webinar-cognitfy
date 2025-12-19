@@ -1,8 +1,8 @@
 services:
   webinar-cognitfy:
     build: .
-    ports:
-      - "${PORT}:3000"
+#    ports:
+#      - "${PORT}:3000"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
