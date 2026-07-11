@@ -19,7 +19,7 @@
   export const metadata: Metadata = {
     title: 'Webinar Cognitfy: Automatización con ROI medible | Reduce costes hasta un 70%',
     description:
-      'Aprende a calcular el coste por proceso y a desplegar automatizaciones 100% personalizadas con Cognitfy. Webinar en vivo: 6 y 8 de mayo 2026 a las 17h y 19h. Plazas limitadas.',
+      'Aprende a calcular el coste por proceso y a desplegar automatizaciones 100% personalizadas con Cognitfy. Webinar en vivo: 29 y 31 de julio 2026 a las 17h y 19h. Plazas limitadas.',
     keywords:
       'automatización, ROI, procesos, Cognitfy, webinar, ahorro de costes, eficiencia operativa',
     authors: [{ name: 'Cognitfy' }],
@@ -39,7 +39,7 @@
       url: '/webinar',
       title: 'Webinar Cognitfy: Reduce hasta un 70% el coste de tus procesos',
       description:
-        'Aprende a medir, priorizar y automatizar procesos con Cognitfy. Webinar gratuito en vivo el 6 y 8 de mayo 2026 a las 17h y 19h.',
+        'Aprende a medir, priorizar y automatizar procesos con Cognitfy. Webinar gratuito en vivo el 29 y 31 de julio 2026 a las 17h y 19h.',
       siteName: 'Cognitfy',
       images: [
         {
@@ -53,7 +53,7 @@
     twitter: {
       card: 'summary_large_image',
       title: 'Webinar Cognitfy: Automatización con ROI medible',
-      description: 'Reduce hasta un 70% el coste de tus procesos. Sesiones en vivo el 6 y 8 de mayo 2026 a las 17h y 19h.',
+      description: 'Reduce hasta un 70% el coste de tus procesos. Sesiones en vivo el 29 y 31 de julio 2026 a las 17h y 19h.',
       images: ['/og-image.jpg'],
     },
     robots: {

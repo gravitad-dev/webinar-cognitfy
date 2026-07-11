@@ -8,32 +8,32 @@ export interface ISession {
 
 export const SESSIONS: ISession[] = [
   {
-    id: '2026-05-06-17h',
-    label: 'Miércoles, 6 de mayo · 17h',
-    dateISO: '2026-05-06T17:00:00+02:00',
+    id: '2026-07-29-17h',
+    label: 'Miércoles, 29 de julio · 17h',
+    dateISO: '2026-07-29T17:00:00+02:00',
     durationMin: 120,
-    cta: 'Quiero asistir 6/5 · 17h',
+    cta: 'Quiero asistir 29/7 · 17h',
   },
   {
-    id: '2026-05-06-19h',
-    label: 'Miércoles, 6 de mayo · 19h',
-    dateISO: '2026-05-06T19:00:00+02:00',
+    id: '2026-07-29-19h',
+    label: 'Miércoles, 29 de julio · 19h',
+    dateISO: '2026-07-29T19:00:00+02:00',
     durationMin: 120,
-    cta: 'Quiero asistir 6/5 · 19h',
+    cta: 'Quiero asistir 29/7 · 19h',
   },
   {
-    id: '2026-05-08-17h',
-    label: 'Viernes, 8 de mayo · 17h',
-    dateISO: '2026-05-08T17:00:00+02:00',
+    id: '2026-07-31-17h',
+    label: 'Viernes, 31 de julio · 17h',
+    dateISO: '2026-07-31T17:00:00+02:00',
     durationMin: 120,
-    cta: 'Quiero asistir 8/5 · 17h',
+    cta: 'Quiero asistir 31/7 · 17h',
   },
   {
-    id: '2026-05-08-19h',
-    label: 'Viernes, 8 de mayo · 19h',
-    dateISO: '2026-05-08T19:00:00+02:00',
+    id: '2026-07-31-19h',
+    label: 'Viernes, 31 de julio · 19h',
+    dateISO: '2026-07-31T19:00:00+02:00',
     durationMin: 120,
-    cta: 'Quiero asistir 8/5 · 19h',
+    cta: 'Quiero asistir 31/7 · 19h',
   },
 ]
 
